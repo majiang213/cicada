@@ -14,10 +14,7 @@ const experiments = {
 
 const envDefinePlugin = new webpack.DefinePlugin({
   __DEFINE__: JSON.stringify({
-    VERSION: cp
-      .execSync('git describe --abbrev=0 --tags')
-      .toString()
-      .replace('\n', ''),
+    VERSION: "0.7.7",
 
     BUILD_TIME: new Date(),
     EMPTY_IMAGE_LIST: fs
